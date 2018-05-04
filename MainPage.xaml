@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="CyberVet10._1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CyberVet10._1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <NavigationView  Margin="0,12,0,0" Grid.Row="1" ItemInvoked="NavView_ItemInvoked" x:Name="nvSample">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Bullets" Content="Agenda" Tag="Agenda" />
+                <NavigationViewItem Icon="Manage" Content="Anesthesia Monitor" Tag="AnesthesiaMonitor" />
+                <NavigationViewItem Icon="Bookmarks" Content="Wellness Protocol" Tag="WellnessProtocol" />
+            </NavigationView.MenuItems>
+            <Frame x:Name="contentFrame">
+            </Frame>
+        </NavigationView>
+
+
+    </Grid>
+</Page>

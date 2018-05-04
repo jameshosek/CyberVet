@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="CyberVet10._1.WellnessProtocol"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CyberVet10._1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <TextBlock Style="{StaticResource PlainTextBlock}" Text="Species"/>
+                <ComboBox x:Name="cbSpecies" Style="{StaticResource PlainComboBox}" SelectionChanged="cbSpecies_SelectionChanged" BorderBrush="Black" />
+                <TextBlock Style="{StaticResource PlainTextBlock}" Text=" Birthdate"/>
+                <Button x:Name="btnBirthdate" Content="pick date" Margin="5,-5,0,0" BorderBrush="#FF040000" Background="#33919191">
+                    <Button.Flyout>
+                        <DatePickerFlyout x:Name="dpfBirthdate" DatePicked="dpfBirthdate_DatePicked" />
+                    </Button.Flyout>
+                </Button>
+                <StackPanel x:Name="spAge" Orientation="Horizontal" Visibility="Collapsed">
+                    <TextBlock Style="{StaticResource PlainTextBlock}" Text=" Age:"/>
+                    <TextBlock x:Name="tbkAge" Style="{StaticResource PlainTextBlock}" Text=""/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                <CheckBox x:Name="chbRabies" Style="{StaticResource PlainCheckBox}" Content="Rabies Given" Click="chbRabies_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="spRabies" Orientation="Horizontal" VerticalAlignment="Top" Visibility="Collapsed">
+                <TextBlock Style="{StaticResource PlainTextBlock}" Text="Date Vaccinated"/>
+                <Button x:Name="btnRabiesDate" Content="pick date" Margin="5,-5,0,0" BorderBrush="#FF040000" Background="#33919191">
+                    <Button.Flyout>
+                        <DatePickerFlyout x:Name="dpfRabiesDate" DatePicked="dpfRabiesDate_DatePicked" />
+                    </Button.Flyout>
+                </Button>
+                <TextBlock Style="{StaticResource PlainTextBlock}" Text=" Duration"/>
+                <ComboBox x:Name="cbRabiesDuration" Style="{StaticResource PlainComboBox}" />
+            </StackPanel>
+            <StackPanel x:Name="spCoreGiven" Orientation="Horizontal" VerticalAlignment="Top" Visibility="Collapsed">
+                <CheckBox x:Name="chbCore" Style="{StaticResource PlainCheckBox}" Content="Core Given" Click="chbCore_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="spCore" Orientation="Horizontal" VerticalAlignment="Top" Visibility="Collapsed">
+                <TextBlock Style="{StaticResource PlainTextBlock}" Text="Date Vaccinated"/>
+                <Button x:Name="btnCoreDate" Content="pick date" Margin="5,-5,0,0" BorderBrush="#FF040000" Background="#33919191">
+                    <Button.Flyout>
+                        <DatePickerFlyout x:Name="dpfCoreDate" DatePicked="dpfCoreDate_DatePicked" />
+                    </Button.Flyout>
+                </Button>
+                <TextBlock Style="{StaticResource PlainTextBlock}" Text=" Duration"/>
+                <ComboBox x:Name="cbCoreDuration" Style="{StaticResource PlainComboBox}" />
+            </StackPanel>
+        </StackPanel>
+        
+
+    </Grid>
+</Page>

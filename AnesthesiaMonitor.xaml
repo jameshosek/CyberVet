@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="CyberVet10._1.AnesthesiaMonitor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CyberVet10._1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" >
+            <Button Content="patients" Style="{StaticResource PlainSelector}"/>
+            <Button Content="protocol" Style="{StaticResource PlainSelector}"/>
+            <Button Content="chart" Style="{StaticResource PlainSelector}"/>
+            <Button Content="log" Style="{StaticResource PlainSelector}"/>
+        </StackPanel>
+        <FlipView>
+            <Grid Background="Blue">
+                
+            </Grid>
+            <Grid Background="ForestGreen">
+
+            </Grid>
+            <Grid Background="Maroon">
+
+            </Grid>
+            <Grid Background="Green">
+
+            </Grid>
+        </FlipView>
+    </Grid>
+</Page>
